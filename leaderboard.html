@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Leaderboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+<header>
+    <h1>Leaderboard</h1>
+    <div class="right-section">
+        <a href="index.html" class="hoverable">Back to Game</a>
+    </div>
+</header>
+<main>
+    <div class="filters-section">
+        <h2>Filter Leaderboard</h2>
+        <div class="filters">
+            <label for="sortBy">Sort By:</label>
+            <select id="sortBy">
+                <option value="score">Highest Score</option>
+                <option value="date">Most Recent</option>
+            </select>
+        </div>
+    </div>
+
+    <table id="leaderboardTable">
+        <thead>
+            <tr>
+                <th>User</th>
+                <th>Mode</th>
+                <th>Difficulty</th>
+                <th>Categories</th>
+                <th>Score</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</main>
+
+<footer>
+    <p>© 2025 Numerix. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93e0529a4fbe7ba2',t:'MTc0Njk1MjMxNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Numerix</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+    <header>
+        <div class="left-section">
+            <span id="currentUser"></span>
+        </div>
+        <h1>Numerix</h1>
+        <div class="right-section">
+            <a id="profilesBtn" class="hoverable" href="profiles.html">Profiles</a>
+            <a class="scoreboard-link hoverable" href="leaderboard.html">Leaderboard</a>
+            <button id="payBtn" class="btn hoverable hidden">Premium</button>
+            <button id="logoutBtn" class="btn hoverable hidden">Logout</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="messageContainer" class="message-container hidden"></div>
+
+        <div class="instructions">
+            <h2>How to Play</h2>
+            <p>
+                1. Select a difficulty level and one or more categories (Addition, Subtraction, Multiplication, Division, Advanced).<br>
+                2. Choose a game mode: Practice, Time Attack (60s), or Endless.<br>
+                3. Click "Start Game" to begin.<br>
+                4. Answer the questions by typing your response and clicking "Submit".<br>
+                5. Use "Hint" if you're stuck (costs points), or "Skip" to move to the next question (also costs points).<br>
+                6. End the game anytime and check your final score and answers summary.<br>
+            </p>
+        </div>
+
+        <div class="settings">
+            <h2>Select Your Settings</h2>
+            <div>
+                <label for="difficulty">Select Difficulty:</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <br/>
+            <div>
+                <h3>Category (Select one or more):</h3>
+                <div class="category-group">
+                    <label><input type="checkbox" class="category" value="addition" checked>Addition</label>
+                    <label><input type="checkbox" class="category" value="subtraction">Subtraction</label>
+                    <label><input type="checkbox" class="category" value="multiplication">Multiplication</label>
+                    <label><input type="checkbox" class="category" value="division">Division</label>
+                    <label><input type="checkbox" class="category" value="advanced">Advanced</label>
+                </div>
+            </div>
+            <br/>
+            <div>
+                <label for="gameMode">Game Mode:</label>
+                <select id="gameMode">
+                    <option value="practice">Practice Mode</option>
+                    <option value="timeattack">Time Attack (60s)</option>
+                    <option value="endless">Endless</option>
+                </select>
+            </div>
+            <br/>
+            <button id="startGameBtn" class="btn hoverable">Start Game</button>
+        </div>
+
+        <div class="game-section hidden">
+            <h2>Game</h2>
+            <div class="info">
+                <span id="timer" class="hidden"></span>
+                <span id="scoreDisplay"></span>
+            </div>
+            <div class="question-container">
+                <div class="question" id="questionText"></div>
+                <input type="number" id="answerInput" placeholder="Your answer"/>
+                <button id="submitAnswerBtn" class="btn hoverable">Submit</button>
+            </div>
+            <div class="controls">
+                <button id="hintBtn" class="btn hoverable">Hint (-2 points)</button>
+                <button id="skipBtn" class="btn hoverable">Skip (-5 points)</button>
+                <button id="endGameBtn" class="btn hoverable">End Game</button>
+            </div>
+            <div id="hintText" class="hidden hint-text"></div>
+            <div id="feedback" class="feedback"></div>
+        </div>
+
+        <div class="result-section hidden">
+            <h2>Game Over</h2>
+            <p>Your final score: <span id="finalScore"></span></p>
+            <h3>Answers Summary:</h3>
+            <div class="answers-summary"></div>
+            <button id="playAgainBtn" class="btn hoverable">Play Again</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Numerix. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93e0529bcab6451f',t:'MTc0Njk1MjMxNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93e088d37c0c7bd8',t:'MTc0Njk1NDUzNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
